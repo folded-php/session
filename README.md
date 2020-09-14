@@ -2,6 +2,8 @@
 
 Session manipulation utilities for your web app.
 
+[![Build Status](https://travis-ci.com/folded-php/session.svg?branch=master)](https://travis-ci.com/folded-php/session) [![Maintainability](https://api.codeclimate.com/v1/badges/0bba99cf2cfc97589dab/maintainability)](https://codeclimate.com/github/folded-php/session/maintainability)
+
 ## Summary
 
 - [About](#about)
