@@ -2,7 +2,7 @@
 
 Session manipulation utilities for your web app.
 
-[![Build Status](https://travis-ci.com/folded-php/session.svg?branch=master)](https://travis-ci.com/folded-php/session) [![Maintainability](https://api.codeclimate.com/v1/badges/0bba99cf2cfc97589dab/maintainability)](https://codeclimate.com/github/folded-php/session/maintainability)
+[![Packagist License](https://img.shields.io/packagist/l/folded/session)](https://github.com/folded-php/session/blob/master/LICENSE) [![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/folded/session)](https://github.com/folded-php/session/blob/master/composer.json#L14) [![Packagist Version](https://img.shields.io/packagist/v/folded/session)](https://packagist.org/packages/folded/session) [![Build Status](https://travis-ci.com/folded-php/session.svg?branch=master)](https://travis-ci.com/folded-php/session) [![Maintainability](https://api.codeclimate.com/v1/badges/0bba99cf2cfc97589dab/maintainability)](https://codeclimate.com/github/folded-php/session/maintainability) [![TODOs](https://img.shields.io/endpoint?url=https://api.tickgit.com/badge?repo=github.com/folded-php/session)](https://www.tickgit.com/browse?repo=github.com/folded-php/session)
 
 ## Summary
 
