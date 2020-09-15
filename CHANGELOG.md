@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Flashing a data will now correctly remove it next time you try to get it again.
+
 ## [0.1.0] 2020-09-11
 
 ### Added
