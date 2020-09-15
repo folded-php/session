@@ -14,14 +14,7 @@ use OutOfRangeException;
  */
 class Session
 {
-    /**
-     * Keep track of flashed keys.
-     * Flashed keys are the keys of data that are flashed.
-     * A flashed data can only be getted once.
-     *
-     * @since 0.1.0
-     */
-    private static array $flashedKeys = [];
+    const FLASHED_KEYS_NAME = "__folded_flashed_keys";
 
     /**
      * Flash a data.
@@ -147,7 +140,7 @@ class Session
      */
     private static function addFlashedKey(string $key): void
     {
-        self::$flashedKeys[$key] = true;
+        $_SESSION[self::FLASHED_KEYS_NAME][$key] = true;
     }
 
     /**
@@ -201,6 +194,6 @@ class Session
      */
     private static function keyFlashed(string $key): bool
     {
-        return isset(self::$flashedKeys[$key]);
+        return isset($_SESSION[self::FLASHED_KEYS_NAME][$key]);
     }
 }
