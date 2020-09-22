@@ -10,8 +10,8 @@ if (!function_exists("getSession")) {
      *
      * @param string $key The name of the key associated with the value stored in session.
      *
-     * @throws RuntimeException    If the session is not started.
-     * @throws OutOfRangeException If the session key is not found.
+     * @throws RuntimeException                              If the session is not started.
+     * @throws Folded\Exceptions\SessionKeyNotFoundException If the session key is not found.
      *
      * @since 0.1.0
      *
