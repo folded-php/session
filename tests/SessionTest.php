@@ -3,6 +3,7 @@
 declare(strict_types = 1);
 
 use Folded\Session;
+use Folded\Exceptions\SessionKeyNotFoundException;
 
 beforeEach(function (): void {
     if (session_status() !== PHP_SESSION_ACTIVE) {
@@ -22,9 +23,19 @@ it("should set the session value in the key", function (): void {
 });
 
 it("should throw an exception if the session key is not found", function (): void {
-    $this->expectException(OutOfRangeException::class);
+    $this->expectException(SessionKeyNotFoundException::class);
 
     Session::get("not-found");
+});
+
+it("should set the session key in the exception if the session key is not found", function (): void {
+    $key = "not-found";
+
+    try {
+        Session::get($key);
+    } catch (SessionKeyNotFoundException $exception) {
+        expect($exception->getKey())->toBe($key);
+    }
 });
 
 it("should throw an exception message if the session key is not found", function (): void {
@@ -130,9 +141,19 @@ it("should remove the session key", function (): void {
 });
 
 it("should throw an exception if the session key is not found when removing the key", function (): void {
-    $this->expectException(OutOfRangeException::class);
+    $this->expectException(SessionKeyNotFoundException::class);
 
     Session::remove("not-found");
+});
+
+it("should set the session key in the exception if the session key is not found when removing the key", function (): void {
+    $key = "not-found";
+
+    try {
+        Session::remove($key);
+    } catch (SessionKeyNotFoundException $exception) {
+        expect($exception->getKey())->toBe($key);
+    }
 });
 
 it("should throw an exception message if the session key is not found when removing the key", function (): void {

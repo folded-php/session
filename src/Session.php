@@ -5,7 +5,7 @@ declare(strict_types = 1);
 namespace Folded;
 
 use RuntimeException;
-use OutOfRangeException;
+use Folded\Exceptions\SessionKeyNotFoundException;
 
 /**
  * Represents values in the server session.
@@ -43,8 +43,8 @@ class Session
      * @param string $key  The name of the key associated with the value stored in session.
      * @param bool   $keep Wether to keep the value (useful if you flashed the data but need to keep it one more time).
      *
-     * @throws RuntimeException    If the session is not started.
-     * @throws OutOfRangeException If the session key is not found.
+     * @throws RuntimeException                              If the session is not started.
+     * @throws Folded\Exceptions\SessionKeyNotFoundException If the session key is not found.
      *
      * @since 0.1.0
      *
@@ -146,7 +146,7 @@ class Session
     /**
      * Throws an exception if the key is not in session.
      *
-     * @throws OutOfRangeException If the key is not found in session.
+     * @throws Folded\Exceptions\SessionKeyNotFoundException If the key is not found in session.
      *
      * @since 0.1.0
      *
@@ -157,7 +157,7 @@ class Session
     {
         if (!isset($_SESSION[$key])) {
             // @todo raise a SessionKeyNotFoundException instead
-            throw new OutOfRangeException("session key $key not found");
+            throw (new SessionKeyNotFoundException("session key $key not found"))->setKey($key);
         }
     }
 

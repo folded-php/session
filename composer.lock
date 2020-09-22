@@ -4,8 +4,50 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f87d0a46d0195247fb0e8f22b456f680",
-    "packages": [],
+    "content-hash": "c2b0e995a34f72499a22c6c83ac2e6d0",
+    "packages": [
+        {
+            "name": "folded/exception",
+            "version": "v0.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/folded-php/exception.git",
+                "reference": "0fd4c4230678d2b36ff7b37bb73fc1e11c9ee258"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/folded-php/exception/zipball/0fd4c4230678d2b36ff7b37bb73fc1e11c9ee258",
+                "reference": "0fd4c4230678d2b36ff7b37bb73fc1e11c9ee258",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "2.*",
+                "pestphp/pest": "0.3.*",
+                "phpunit/phpunit": "9.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Folded\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Khalyomede",
+                    "email": "khalyomede@gmail.com"
+                }
+            ],
+            "description": "Various kind of exception to throw for your web app.",
+            "time": "2020-09-18T17:22:08+00:00"
+        }
+    ],
     "packages-dev": [
         {
             "name": "composer/semver",
@@ -4429,7 +4471,9 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": ">=7.4.0"
+    },
     "platform-dev": [],
     "plugin-api-version": "1.1.0"
 }

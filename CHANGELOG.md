@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Breaking
+
+- Using `getSession()` or `removeSession()` will now throw a `Folded\Exceptions\SessionKeyNotFoundException` instead of a `OutOfRangeException` if the key is not found in the session.
+
 ## [0.1.1] 2020-09-15
 
 ### Fixed
