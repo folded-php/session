@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace Folded;
 
-if (!function_exists("setSession")) {
+if (!function_exists("Folded\setSession")) {
     /**
      * Set the value in the session.
      *
