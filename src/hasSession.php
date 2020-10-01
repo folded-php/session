@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace Folded;
 
-if (!function_exists("hasSession")) {
+if (!function_exists("Folded\hasSession")) {
     /**
      * Returns true if the session has the value by its key, else returns false.
      *

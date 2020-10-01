@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace Folded;
 
-if (!function_exists("getSession")) {
+if (!function_exists("Folded\getSession")) {
     /**
      * Get a value from the session.
      *

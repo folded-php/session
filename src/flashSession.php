@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace Folded;
 
-if (!function_exists("flashSession")) {
+if (!function_exists("Folded\flashSession")) {
     /**
      * Flash a data.
      * A flashed data can only be getted once.

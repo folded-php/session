@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace Folded;
 
-if (!function_exists("removeSession")) {
+if (!function_exists("Folded\removeSession")) {
     /**
      * Removes a value by its key in the session.
      *
