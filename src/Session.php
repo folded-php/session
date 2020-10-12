@@ -12,7 +12,7 @@ use Folded\Exceptions\SessionKeyNotFoundException;
  *
  * @since 0.1.0
  */
-class Session
+final class Session
 {
     const FLASHED_KEYS_NAME = "__folded_flashed_keys";
 
