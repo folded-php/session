@@ -4,6 +4,8 @@ declare(strict_types = 1);
 
 namespace Folded;
 
+use RuntimeException;
+
 if (!function_exists("Folded\hasSession")) {
     /**
      * Returns true if the session has the value by its key, else returns false.
