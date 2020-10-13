@@ -43,8 +43,10 @@ final class Session
      * @param string $key  The name of the key associated with the value stored in session.
      * @param bool   $keep Wether to keep the value (useful if you flashed the data but need to keep it one more time).
      *
-     * @throws RuntimeException                              If the session is not started.
-     * @throws Folded\Exceptions\SessionKeyNotFoundException If the session key is not found.
+     * @throws RuntimeException            If the session is not started.
+     * @throws SessionKeyNotFoundException If the session key is not found.
+     *
+     * @return mixed|string
      *
      * @since 0.1.0
      *
@@ -146,7 +148,7 @@ final class Session
     /**
      * Throws an exception if the key is not in session.
      *
-     * @throws Folded\Exceptions\SessionKeyNotFoundException If the key is not found in session.
+     * @throws SessionKeyNotFoundException If the key is not found in session.
      *
      * @since 0.1.0
      *

@@ -4,6 +4,8 @@ declare(strict_types = 1);
 
 namespace Folded;
 
+use RuntimeException;
+
 if (!function_exists("Folded\removeSession")) {
     /**
      * Removes a value by its key in the session.
